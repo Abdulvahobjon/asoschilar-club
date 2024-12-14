@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: #0d0d0d;
   color: #cccccc;
 }
-
 .container {
   max-width: 1420px;
   margin-left: auto;
@@ -19,16 +16,14 @@ body {
   padding-right: 20px;
 }
 
+/* header start , header boshlandi */
 .header {
-  border: 2px solid white;
   padding-top: 64px;
   padding-bottom: 23px;
 }
 .header-container {
-  border: 2px solid white;
   display: flex;
   justify-content: space-between;
-
   align-items: center;
 }
 .header-logo {
@@ -43,7 +38,6 @@ body {
   gap: 36px;
   border-radius: 100px;
   align-items: center;
-
   background-color: #17171799;
 }
 .nav-link {
@@ -73,7 +67,6 @@ body {
 .header-tel:hover {
   color: white;
 }
-
 .header-hamburger {
   width: 48px;
   height: 48px;
@@ -86,7 +79,6 @@ body {
   cursor: pointer;
   display: none;
 }
-
 @media (max-width: 824px) {
   .header {
     padding-top: 25px;
@@ -103,4 +95,87 @@ body {
   .header-tel {
     display: none;
   }
+}
+/* header end , header tugadi */
+
+.hero {
+  padding-top: 125px;
+  padding-bottom: 82px;
+}
+.hero-container {
+  max-width: 1132px;
+}
+.hero-top {
+  text-align: center;
+}
+.hero-title {
+  font-family: Poppins, sans-serif;
+  font-size: 132px;
+  font-weight: 500;
+  line-height: 132px;
+  letter-spacing: -2.4000000953674316px;
+  background: linear-gradient(243.33deg, #fffff7 8.55%, #727267 100%);
+  color: transparent;
+  background-clip: text;
+  margin-bottom: 30px;
+  max-width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-text {
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: -0.18000000715255737px;
+  text-align: center;
+  max-width: 510px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 49px;
+}
+.hero-link {
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 15px;
+  gap: 28px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: Poppins , sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+
+}
+
+
+@media (max-width:824px) {
+    .hero{
+        padding-top: 10px;
+    }
+    .hero-title{
+        font-size: 53px;
+        line-height: 1;
+        margin-bottom: 25px;
+    }
+    .hero-text{
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    .hero-link{
+        font-size: 16px;
+        line-height: 1;
+    }
+    .hero-link img{
+        width: 30px;
+    }
 }
