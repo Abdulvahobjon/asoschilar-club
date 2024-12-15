@@ -462,7 +462,6 @@ body {
 
 /* about start */
 .about {
-  border: 2px solid red;
   padding-top: 78px;
   padding-bottom: 69px;
 }
@@ -512,7 +511,7 @@ body {
   .about-img {
     order: -11;
     object-fit: cover;
-    
+
   }
   .about-title{
     font-size: 36px;
