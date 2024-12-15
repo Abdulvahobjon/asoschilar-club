@@ -632,6 +632,8 @@ body {
   padding-top: 78px;
   padding-bottom: 99px;
   border-radius: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .mission-title {
   font-family: Poppins, sans-serif;
@@ -665,24 +667,148 @@ body {
   color: #cccccc;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .mission {
     padding-top: 30px;
     padding-bottom: 28px;
   }
-  .mission-title{
+  .mission-title {
     font-size: 27px;
     margin-bottom: 28px;
   }
-  .mission-box{
+  .mission-box {
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 30px;
     padding-right: 30px;
   }
-  .mission-text{
-    font-size: 20px;
+  .mission-text {
+    font-size: 24px;
     line-height: 1.4;
     letter-spacing: -1px;
+  }
+}
+
+/* requirements start */
+
+.requirements {
+  padding-top: 53px;
+  padding-bottom: 52px;
+}
+.requirements-container {
+  max-width: 1124px;
+}
+.requirements-title {
+  font-family: Poppins, sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -1.3200000524520874px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 53px;
+}
+.requirements-text {
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -1.3200000524520874px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 40px;
+}
+.requirements-row {
+  gap: 52px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 40px;
+}
+.requirements-col {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 30px 16px;
+  border: 1px solid #262626;
+  background-color: #1b1b1b;
+  border-radius: 30px;
+  grid-column: span 2;
+}
+.requirements-col-img {
+  width: 100px;
+  height: 100px;
+}
+.requirements-col-text {
+  max-width: 175px;
+  font-family: Poppins , sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.5199999809265137px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.requirements-row .requirements-col:nth-child(4) {
+  grid-column: span 3;
+  max-width: 382px;
+  margin-left: auto;
+  width: 100%;
+}
+.requirements-row .requirements-col:nth-child(5) {
+  grid-column: span 3;
+  max-width: 382px;
+  width: 100%;
+}
+.requirements-row .requirements-col:nth-child(4) .requirements-col-text{
+  max-width: 226px;
+}
+.requirements-row .requirements-col:nth-child(5) .requirements-col-text{
+  max-width: 226px;
+}
+
+@media (max-width:980px) {
+  .requirements-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .requirements-col {
+    grid-column: span 1 !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .requirements{
+    padding-top: 27px;
+    padding-bottom: 26px;
+  }
+  .requirements-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .requirements-col-img{
+    width: 80px;
+    height: 80px;
+  }
+  .requirements-col-text{
+    font-size: 18px;
+  }
+  .requirements-title{
+    font-size: 30px;
+    margin-bottom: 36px;
+  }
+  .requirements-text{
+    font-size: 20px;
+    margin-bottom: 28px;
+  }
+  .requirements-col{
+    padding: 16px;
+    border-radius: 20px;
+  }
+  .requirements-col .requirements-col-text{
+    max-width: 100%;
   }
 }
