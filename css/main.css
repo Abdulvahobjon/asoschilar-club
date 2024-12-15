@@ -683,6 +683,6 @@ body {
   .mission-text{
     font-size: 20px;
     line-height: 1.4;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
   }
 }
