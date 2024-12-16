@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   background-color: #0d0d0d;
   color: #cccccc;
@@ -1409,6 +1412,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .steps-title{
+    font-size: 27px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
   .steps-row{
     flex-direction: column;
     justify-content: center;
