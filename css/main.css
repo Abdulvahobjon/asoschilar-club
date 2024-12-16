@@ -247,7 +247,7 @@ body {
 }
 @media (max-width: 824px) {
   .hero {
-    padding-top: 10px;
+    padding-top: 100px;
     padding-bottom: 42px;
   }
   .hero-title {
@@ -850,12 +850,12 @@ body {
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 768px) {
   .members {
     padding-top: 24px;
     padding-bottom: 22px;
   }
-  .members-title{
+  .members-title {
     margin-bottom: 40px;
     font-size: 30px;
     line-height: 1.2;
@@ -869,5 +869,382 @@ body {
     display: block;
     border-radius: 22px;
     margin-bottom: 18px;
+  }
+}
+
+/* price start */
+
+.price {
+  padding-top: 49px;
+  padding-bottom: 75px;
+}
+.price-container {
+  max-width: 1132px;
+}
+.price-title {
+  font-family: Poppins, sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 52.8px;
+  letter-spacing: -1.3200000524520874px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 70px;
+  background: linear-gradient(
+    71.83deg,
+    #fffff7 0%,
+    rgba(255, 255, 247, 0.34) 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
+.price-top {
+}
+.price-top-title {
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 52.8px;
+  letter-spacing: -1.3200000524520874px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background: linear-gradient(
+    79.97deg,
+    #fffff7 0%,
+    rgba(255, 255, 247, 0.34) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  margin-bottom: 50px;
+}
+.price-top-money {
+  font-family: Poppins;
+  font-size: 115px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: -1.6200000047683716px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #cccccc;
+  margin-bottom: 64px;
+}
+.price-top-line {
+  border-top: 4px dashed #4c4c4c;
+  max-width: 1042px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+.price-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 52px;
+}
+.price-col {
+  background-color: green;
+  padding-top: 42px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 39px;
+  border-radius: 30px;
+  background-color: #303030;
+  border: 1px solid #262626;
+  position: relative;
+}
+
+.price-row .price-col:nth-child(1):after {
+  content: '3';
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 140px;
+  font-weight: 600;
+  line-height: 0.7;
+  letter-spacing: -0.5199999809265137px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: inline-block;
+  opacity: 5%;
+}
+.price-row .price-col:nth-child(2):after {
+  content: '6';
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 140px;
+  font-weight: 600;
+  line-height: 0.7;
+  letter-spacing: -0.5199999809265137px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: inline-block;
+  opacity: 5%;
+}
+.price-row .price-col:nth-child(3):after {
+  content: '12';
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 140px;
+  font-weight: 600;
+  line-height: 0.7;
+  letter-spacing: -0.5199999809265137px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: inline-block;
+  opacity: 5%;
+}
+
+.price-row .price-col:nth-child(2) {
+  background-color: #1b1b1b;
+  transform: translateY(42px);
+}
+.price-row .price-col:nth-child(3) {
+  background-color: #121212;
+}
+
+.price-col-title {
+  font-family: Poppins, sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.5199999809265137px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 34px;
+  position: relative;
+  z-index: 11;
+}
+.price-col-money {
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.5199999809265137px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  position: relative;
+  z-index: 11;
+}
+
+@media (max-width: 980px) {
+  .price-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .price-row .price-col:nth-child(2) {
+    order: 22;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .price {
+    padding-top: 25px;
+    padding-bottom: 38px;
+  }
+  .price-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+  .price-top-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+  .price-top-money {
+    font-size: 83px;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  .price-top-line {
+    margin-bottom: 30px;
+  }
+  .price-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .price-row .price-col:nth-child(2) {
+    order: 0;
+    transform: translateY(0);
+  }
+  .price-row {
+    gap: 20px;
+  }
+  .price-col {
+    padding: 30px 32px;
+    border-radius: 20px;
+  }
+  .price-col-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .price-col-money {
+    font-size: 24px;
+  }
+  .price-row .price-col:nth-child(1):after {
+    content: '3';
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    font-size: 110px !important;
+  }
+  .price-row .price-col:nth-child(2):after {
+    content: '6';
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    font-size: 110px !important;
+  }
+  .price-row .price-col:nth-child(3):after {
+    content: '12';
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    font-size: 110px !important;
+  }
+}
+
+/* contact */
+
+.contact {
+  padding-top: 60px;
+  padding-bottom: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.contact-container {
+  max-width: 1060px;
+  background-color: orange;
+  background: linear-gradient(113.49deg, #1a1a1a 0%, #0d0d0d 100%);
+  padding-top: 62px;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-bottom: 64px;
+  border-radius: 24px;
+}
+.contact-title {
+  font-family: Poppins, sans-serif;
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: -1.6200000047683716px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 23px;
+}
+.contact-title-2 {
+  font-size: 45px;
+  line-height: 55px;
+}
+
+.contact-list {
+  background-color: white;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 63px;
+  padding-right: 63px;
+  border-radius: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-list .contact-item:nth-child(2){
+  max-width: 235px;
+  padding-left: 37px;
+  padding-right: 37px;
+  border-left: 2px dashed #C1C1C1;
+  border-right: 2px dashed #C1C1C1;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.contact-item-title {
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.contact-link {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (max-width:980px) {
+  .contact-list {
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns:  1fr;
+    list-style: none;
+    align-items: center;
+    gap: 15px;
+  }
+  .contact-item{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  .contact-list .contact-item:nth-child(2){
+    max-width: 100%;
+  padding-left: 0;
+  padding-right: 37px;
+  border: none;
+  border-top: 2px dashed #C1C1C1;
+  border-bottom: 2px dashed #C1C1C1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+}
+
+@media (max-width: 768px) {
+  .contact-container{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .contact-list{
+    padding: 20px;
+  }
+  .contact-title{
+    font-size: 36px;
+    line-height: 1;
+  }
+  .contact-title-2{
+    font-size: 28px;
+    line-height: 1;
   }
 }
