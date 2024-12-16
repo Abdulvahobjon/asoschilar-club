@@ -1416,7 +1416,7 @@ body {
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
-
+    border-radius: 18px;
   }
   .steps-row-strelka{
     margin-top: 0;
