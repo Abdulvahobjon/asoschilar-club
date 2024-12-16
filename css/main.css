@@ -1523,3 +1523,20 @@ body.active{
     max-width: 100% !important;
   }
 }
+
+/* layout */
+.develop-container{
+  position: relative;
+}
+.develop-layout-img{
+  width: 450px;
+  position: absolute;
+  bottom:-64px ;
+  left: -497px;
+}
+.develop-layout-img-2{
+  width: 450px;
+  position: absolute;
+  top: 128px ;
+  right: -497px;
+}
