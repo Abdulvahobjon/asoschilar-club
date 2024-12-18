@@ -356,6 +356,11 @@ body.active {
   .hero-link {
     font-size: 16px;
     line-height: 1;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 14px;
+    padding-left: 20px;
+    
   }
 
   .hero-link img {
@@ -1034,12 +1039,17 @@ body.active {
   width: 100%;
   border: 1px solid #262626;
   background-color: #1b1b1b;
-  border-radius: 15px;
+  border-radius: 30px;
   padding: 14px 15px 22px 14px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .members-col-img {
   width: 100%;
+  height: auto;
+  max-height: 200px;
   display: block;
   border-radius: 20px;
   margin-bottom: 18px;
@@ -2019,8 +2029,8 @@ body.active {
 }
 
 .ptb {
-  padding-top: 10px;
-  padding-bottom: 11px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 
