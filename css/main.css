@@ -122,7 +122,7 @@ body.active {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 32px;
+  top: 51px;
   right: 32px;
   cursor: pointer;
   background-color: transparent;
@@ -907,6 +907,8 @@ body.active {
   display: block;
   border-radius: 20px;
   margin-bottom: 18px;
+  object-fit: cover;
+  object-position: top;
 }
 .members-col-title {
   font-family: Poppins, sans-serif;
@@ -1232,6 +1234,7 @@ body.active {
   margin-bottom: 23px;
 }
 .contact-title-2 {
+  
   font-size: 45px;
   line-height: 55px;
 }
