@@ -1670,8 +1670,9 @@ body.active {
   }
   .club-reasons-col-count{
     font-size: 80px;
-    width: 68px;
+    width: 48px;
     height: 74px;
+    flex-shrink: 0;
     display: flex;
     align-items:center ;
   }
