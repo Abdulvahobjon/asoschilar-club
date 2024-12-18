@@ -122,7 +122,7 @@ body.active {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 32px;
+  top: 51px;
   right: 32px;
   cursor: pointer;
   background-color: transparent;
