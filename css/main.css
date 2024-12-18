@@ -419,6 +419,7 @@ body.active {
 .develop {
   padding-top: 114px;
   padding-bottom: 67px;
+  overflow-x: hidden;
 }
 .develop-container {
   max-width: 1024px;
