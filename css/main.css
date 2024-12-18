@@ -905,6 +905,8 @@ body.active {
   display: block;
   border-radius: 20px;
   margin-bottom: 18px;
+  object-fit: cover;
+  object-position: top;
 }
 .members-col-title {
   font-family: Poppins, sans-serif;
