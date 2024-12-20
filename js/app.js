@@ -28,12 +28,12 @@ let formModamValid = document.querySelector(".formModamValid")
 let formModamInvalid = document.querySelector(".formModamInvalid")
 let formModalText = document.querySelector(".formModalText")
 let bgCloseModal = document.querySelector(".bgCloseModal")
+let btnImg = document.querySelectorAll(".develop-col-btn-img")
 
 
 formModal.addEventListener("click", function(){
     bgCloseModal.style.display = "none";
     formModal.classList.remove("active")
-
 })
 bgCloseModal.addEventListener("click", function(){
     bgCloseModal.style.display = "none";
@@ -67,7 +67,6 @@ function validateForm(formName, nameId, phoneId, nameErrorId, phoneErrorId) {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         let isValid = true;
-
         // Ism validatsiyasi
         const nameValue = nameInput.value.trim();
         if (!/^[A-Za-z\s]+$/.test(nameValue)) {
@@ -88,17 +87,26 @@ function validateForm(formName, nameId, phoneId, nameErrorId, phoneErrorId) {
 
         // Agar validatsiya muvaffaqiyatli bo'lsa, formani yuborish
         if (isValid) {
+            btnImg[0].classList.add("rotating")
+            btnImg[1].classList.add("rotating")
+            
+            bgCloseModal.style.display = "flex";
             fetch("https://script.google.com/macros/s/AKfycbxQuN4-slVkRK_d0YRmzel38cb8JTGKnicSaf730B9N4r6iS0yO66sy8CpE0-iZgKzy/exec", {
                 method: "POST",
                 body: new FormData(form)
             })
+            
                 .then((response) => {
                     formModal.classList.add("active")
                     bgCloseModal.style.display = "flex";
                     formModalText.textContent = "Thank you! Your data has been submitted"
                     form.reset();
+                    btnImg[0].classList.remove("rotating")
+                    btnImg[1].classList.remove("rotating")
                 })
                 .catch((error) => {
+                    btnImg[0].classList.remove("rotating")
+                    btnImg[1].classList.remove("rotating")
                     formModal.classList.add("active")
                     formModamValid.style.display = "none";
                     bgCloseModal.style.display = "flex";
