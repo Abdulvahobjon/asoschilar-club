@@ -1159,6 +1159,7 @@ body.active {
   font-family: sans-serif;
 }
 @media (max-width: 980px) {
+    
   .members-row,
   .requirements-row {
     grid-template-columns: 1fr 1fr;
@@ -1206,13 +1207,26 @@ body.active {
   }
   .steps-row {
     padding-left: 17px;
+   
   }
   .club-reasons-row {
     gap: 28px;
   }
 }
-@media (max-width: 840px) {
-  .club-reasons-row {
+@media (max-width: 860px) {
+    .steps-row{
+        padding-top: 40px;
+        padding-bottom: 40px;
+      gap: 60px;
+
+    }
+    .steps-col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .club-reasons-row {
     grid-template-columns: 1fr;
   }
   .club-reasons-col {
