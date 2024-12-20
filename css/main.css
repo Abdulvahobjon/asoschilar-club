@@ -203,6 +203,7 @@ body.active {
   display: block;
   margin-top: auto;
   color: #fff;
+  margin-bottom: 50px;
 }
 .hero {
   padding-top: 125px;
