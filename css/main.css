@@ -618,7 +618,7 @@ body.active {
   margin-bottom: 40px;
 }
 .mission-text {
-  font-size: 45px;
+  font-size: 43px;
   font-weight: 500;
   line-height: 60px;
   letter-spacing: -1.6200000047683716px;
@@ -920,6 +920,7 @@ body.active {
   font-family: Poppins, sans-serif;
   font-size: 54px;
   letter-spacing: -1.6200000047683716px;
+  margin-bottom: 20px;
 }
 .contact-item-title,
 .contact-link {
