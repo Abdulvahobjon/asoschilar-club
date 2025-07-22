@@ -352,7 +352,7 @@ body.active {
 .benefits-row,
 .price-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 52px;
 }
 .benefits-title {
