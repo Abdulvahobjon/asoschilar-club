@@ -1,3 +1,11 @@
+
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
 let headerResponsiveClose = document.querySelector(".header-responsive-close");
 let headerResponsive = document.querySelector(".header-responsive");
 let headerResponsiveNavLink = document.querySelectorAll(
