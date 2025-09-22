@@ -895,7 +895,7 @@ body.active {
 .requirements-row {
   gap: 52px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
 }
 
@@ -907,7 +907,6 @@ body.active {
   border: 1px solid #262626;
   background-color: #1b1b1b;
   border-radius: 30px;
-  grid-column: span 2;
 }
 
 .requirements-col-text {
@@ -916,24 +915,6 @@ body.active {
   line-height: 24px;
   letter-spacing: -0.5199999809265137px;
   text-align: left;
-}
-
-.requirements-row .requirements-col:nth-child(4) {
-  grid-column: span 3;
-  max-width: 382px;
-  margin-left: auto;
-  width: 100%;
-}
-
-.requirements-row .requirements-col:nth-child(5) {
-  grid-column: span 3;
-  max-width: 382px;
-  width: 100%;
-}
-
-.requirements-row .requirements-col:nth-child(4) .requirements-col-text,
-.requirements-row .requirements-col:nth-child(5) .requirements-col-text {
-  max-width: 226px;
 }
 
 .members {
