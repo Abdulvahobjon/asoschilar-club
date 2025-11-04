@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asoschilar Club</title>
+    <style>
+        * {margin: 0;padding: 0;box-sizing: border-box;}html {overflow-x: hidden;scroll-behavior: smooth;}body {background-color: #000;color: #fff;overflow-x: hidden;font-family: sans-serif;}.bg {object-fit: contain;object-position: top left;width: 100%;position: absolute;top: 0;left: 0;inset: 1;z-index: -1;}@media (min-width: 450px) {.bg {display: none;}}.videoBox{height: clamp(156px, 60vw, 266px);}.container {padding: 0 10px;display: flex;align-items: center;flex-direction: column;max-width: 437px;margin: 0 auto;}.club__logo {object-fit: contain;margin-bottom: 20px;}.club__title {font-family: Hecativas, sans-serif;font-weight: 700;font-size: clamp(21px, 6.7vw, 30px);line-height: 125%;text-align: center;text-transform: uppercase;margin-bottom: 25px;}.club__video {margin-bottom: 25px;max-width: 400px;width: 100%;height: auto;object-fit: contain;}.btn-join {border: none;background-color: transparent;max-width: 350px;width: 100%;display: flex;align-items: center;justify-content: center;cursor: pointer;}.btn-join > img {width: 100%;object-fit: contain;user-select: none;-webkit-user-drag: none;-moz-user-select: none;}.title {font-family: Hecativas, sans-serif;font-weight: 700;font-size: clamp(17px, 5.5vw, 24px);line-height: 120%;text-align: center;text-transform: uppercase;margin-bottom: 20px;}.about__description {max-width: 309px;border-left: 2px solid #ffc771;font-weight: 400;font-size: 14px;line-height: 20px;padding-left: 7px;margin-bottom: 20px;margin-right: auto;}.about__col {display: flex;flex-direction: column;align-items: center;gap: 15px;max-width: 380px;width: 100%;}.about__description__box {max-width: 380px;width: 100%;margin-left: auto;margin-right: auto;}.about__row {width: 100%;background-color: #252525;border-radius: 15px 0 15px 0;display: flex;align-items: center;justify-content: space-between;padding: 15px;position: relative;min-height: 110px;}.about__row__title {font-family: Poppins, sans-serif;font-weight: 700;font-size: clamp(16px, 5vw, 20px);line-height: 100%;text-transform: uppercase;margin-bottom: 5px;}.about__row__text {font-weight: 300;font-size: clamp(12px, 3.8vw, 14px);line-height: 18px;}.about__row:nth-child(2n) {flex-direction: row-reverse;padding-left: 110px;}.about__row__img {position: absolute;right: 0;}.about__row:nth-child(2n) .about__row__img {left: 0;}@media (max-width: 375px) {.about__row__img {transform: scale(0.9);}.about__row:nth-child(2n) {padding-left: 70px;}}.statistika {max-width: 490px;padding: 0 10px;width: 100%;display: flex;margin: 0 auto;}.statistika__chart {width: 100%;height: auto;object-fit: contain;user-select: none;-webkit-user-drag: none;-moz-user-select: none;}
+    </style>
+    <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="./css/main.css" />
+    </noscript>
+</head>
+
+<body>
+    <div class="container" style="padding-top: 20px;">
+        <img src="./images/logo.avif" alt="club logo" decoding="async" loading="lazy" class="club__logo" width="66"
+            height="36">
+        <h1 class="club__title">Katta maqsadli tadbirkorlar uchun yopiq biznes club</h1>
+
+        <div class="videoBox">
+            <style>
+                wistia-player[media-id='e8kxje34gt']:not(:defined) {
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/e8kxje34gt/swatch');
+                    display: block;
+                    filter: blur(5px);
+                    padding-top: 56.25%;
+                }
+            </style> <wistia-player media-id="e8kxje34gt" aspect="1.7777777777777777"></wistia-player>
+        </div>
+        <a href="#form_sec" class="btn-join">
+            <img src="./images/joinBtn.avif" alt="btn" loading="lazy" decoding="async" width="350" height="100">
+        </a>
+
+        <h2 class="title" style="margin-top: 40px;">Club’da nimalar bo’ladi?</h2>
+        <div class="about__description__box">
+            <p class="about__description">Klubimiz a’zolari bir oyda 2 marotaba offline korishadilar va <b>bu 2
+                    uchrashuv
+                    har oy bir xil tartibda o’tmaydi...</b></p>
+        </div>
+        <div class="about__col">
+            <div class="about__row">
+                <div>
+                    <h3 class="about__row__title">Ekskursiya</h3>
+                    <p class="about__row__text">
+                        Mavjud bizneslarga <br>
+                        (zavod, showroom, do’kon) <br> ekskursiyalarga boramiz
+                    </p>
+                </div>
+                <img src="./images/about/shield.png" alt="about img" loading="lazy" decoding="async"
+                    class="about__row__img" width="94" height="94">
+            </div>
+            <div class="about__row">
+                <div>
+                    <h3 class="about__row__title">razborlar</h3>
+                    <p class="about__row__text">
+                        Kompaniyangiz haqida va nimani <br> to’g’rilamoqchi bo’lganingizni aytasiz, <br> jamoa esa birga
+                        yechim
+                        beradi.
+                    </p>
+                </div>
+                <img src="./images/about/euro.png" alt="about img" loading="lazy" decoding="async"
+                    class="about__row__img" width="88" height="88">
+            </div>
+            <div class="about__row">
+                <div>
+                    <h3 class="about__row__title">sport</h3>
+                    <p class="about__row__text">
+                        Club bilan birgalikda <br> marafonlar va club doirasida <br> futbol o’yinlarida qatnashasiz 
+                    </p>
+                </div>
+                <img src="./images/about/cubic.png" alt="about img" loading="lazy" decoding="async"
+                    class="about__row__img" width="158" height="125">
+            </div>
+            <div class="about__row">
+                <div>
+                    <h3 class="about__row__title">mutaxassis spikerlar</h3>
+                    <p class="about__row__text">
+                        Tanilgan va katta tadbirkorlarni <br> mehmon qilib chaqiramiz
+                    </p>
+                </div>
+                <img src="./images/about/bulletPoint.png" alt="about img" loading="lazy" decoding="async"
+                    class="about__row__img" width="104" height="106">
+            </div>
+            <div class="about__row">
+                <div>
+                    <h3 class="about__row__title">chellenjlar</h3>
+                    <p class="about__row__text">
+                        Turli yo’nalishlarda insonni <br> rivojlantiruvchi chellenjlar <br> o’tkazamiz
+                    </p>
+                </div>
+                <img src="./images/about/magnets.png" alt="about img" loading="lazy" decoding="async"
+                    class="about__row__img" width="116" height="116">
+            </div>
+            <div class="about__row" style="padding-right: 37px;">
+                <div>
+                    <h3 class="about__row__title">buddy tizimi</h3>
+                    <p class="about__row__text">
+                        Club doirasida, kichik guruhlarda <br> biznes razborlar va amaliy <br> harakatlar o’tkazamiz
+                    </p>
+                </div>
+                <img src="./images/about/graphLine.png" alt="about img" loading="lazy" decoding="async"
+                    class="about__row__img" width="90" height="90">
+            </div>
+            <div class="about__row">
+                <div>
+                    <h3 class="about__row__title">Madaniy hordiq</h3>
+                    <p class="about__row__text">
+                        Har mavsumda 2-3 marotaba <br> dam olish maskanlarida maroqli <br> va foydali dam olamiz
+                    </p>
+                </div>
+                <img src="./images/about/rockets.png" alt="about img" loading="lazy" decoding="async"
+                    class="about__row__img" width="116" height="116">
+            </div>
+        </div>
+        <h2 class="title" style="margin-top: 40px;">statistika</h2>
+    </div>
+
+    <div class="statistika">
+        <img src="./images/statistika.avif" alt="chart pie" decoding="async" loading="lazy" class="statistika__chart"
+            width="474" height="274">
+    </div>
+
+    <div class="container">
+        <a href="#form_sec" class="btn-join">
+            <img src="./images/joinBtn.avif" alt="btn" loading="lazy" decoding="async" width="350" height="100">
+        </a>
+        <h2 class="title" style="margin-top: 40px; margin-bottom: 25px;">maqsadimiz</h2>
+        <div class="goal">
+            <img src="./images/about/bulletPoint.png" alt="bulletPoint" class="goal__img" width="86" height="96">
+            <p class="goal__text">Biznes va shaxsiy rivojlanishda o’sishga Intilayotgan tadbirkorlar va biznes
+                rahbarlarini birlashtirish va birgalikda tezroq o’sish!</p>
+        </div>
+        <h2 class="title" style="margin-top: 40px; margin-bottom: 15px;">So’ngi kelgan <br> mehmon spikerlar</h2>
+        <div class="carousel">
+            <div class="carousel__track" id="carouselTrack">
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member1.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member2.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member3.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member4.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member5.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member1.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member2.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member3.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member4.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+                <div class="carusel__card">
+                    <img src="./images/members/marquee/member5.avif" alt="member" class="marquee__track__img"
+                        loading="lazy" decoding="async" width="236" height="282">
+                </div>
+            </div>
+        </div>
+
+
+        <section class="member">
+            <div class="member-container">
+                <h2 class="title" style="margin-top: 40px; margin-bottom: 15px;">Klubimizning <br> doimiy a’zolari</h2>
+                <div class="member-row">
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/Azam-logo.avif" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Azam karimberdiyev</h3>
+                                <p class="member-info-text">Yumesc logistik kompaniyasi asoschisi</p>
+                            </div>
+                            <img class="gautea-img" loading="lazy" decoding="async" width="153" height="28"
+                                src="./images/logo/yumece.avif" alt="">
+                        </div>
+                    </div>
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/sherzod.avif" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Sherzod Rabbimov</h3>
+                                <p class="member-info-text">Premium doors asoschisi</p>
+                            </div>
+
+                            <div class="premium">
+                                <img class="gautea-img" loading="lazy" decoding="async" width="153" height="34"
+                                    src="./images/logo/premium-doors.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/Xondamir.avif" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Xondamir Karimov</h3>
+                                <p class="member-info-text">NEXUS asoschisi</p>
+                            </div>
+                            <img class="gautea-img" width="153" height="34" loading="lazy" decoding="async"
+                                src="./images/logo/nexus.png" alt="">
+                        </div>
+                    </div>
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/xojiakbar.avif" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Xojiakbar Nigmanov</h3>
+                                <p class="member-info-text">Poligrafiya Midi Max asoschisi</p>
+                            </div>
+                            <div class="mindamax">
+                                <img class="gautea-img" width="153" height="34" src="./images/logo/mindimax.avif"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/hasan.png" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Hasan Dadashev</h3>
+                                <p class="member-info-text">Retail business GAUTIE</p>
+                            </div>
+                            <div class="gautea">
+                                <img class="gautea-img" width="153" height="34" src="./images/logo/gautea.avif"
+                                    loading="lazy" decoding="async" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/kamron.avif" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Kamron Abduqodirov</h3>
+                                <p class="member-info-text">UZUM sotuv, Marketplace</p>
+                            </div>
+                            <img class="gautea-img" src="./images/logo/uzum market.avif" loading="lazy" decoding="async"
+                                width="153" height="34" alt="">
+                        </div>
+                    </div>
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/shodlik.avif" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Shodlik Darxonov</h3>
+                                <p class="foggy">Foggy bolalar kiyim
+                                    do’koni asoschisi</p>
+                            </div>
+                            <img class="gautea-img" width="153" height="34" src="./images/logo/foggy.avif"
+                                loading="lazy" decoding="async" alt="">
+                        </div>
+                    </div>
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/foziljon.avif" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Foziljon Yahyoyev</h3>
+                                <p class="foggy">Farmasevtika</p>
+                            </div>
+                            <img class="gautea-img" loading="lazy" decoding="async" width="153" height="34"
+                                src="./images/logo/biznesi.avif" alt="">
+                        </div>
+                    </div>
+                    <div class="member-col">
+                        <img class="member-col-img" width="395" height="240" loading="lazy" decoding="async"
+                            src="./images/members/islom.png" alt="">
+                        <div class="member-col-row">
+                            <div class="member-info">
+                                <h3 class="member-info-title">Islom Fayzullayevich</h3>
+                                <p class="hadya-text">“Khadya Farm”, “Khadya Nur”, “Zest” kompaniyalari asoschisi</p>
+                            </div>
+                            <img class="gautea-img" width="153" height="34" src="./images/logo/hadiya.avif"
+                                loading="lazy" decoding="async" alt="">
+                        </div>
+                    </div>
+                    <h2 class="member-col-title">40+</h2>
+                </div>
+            </div>
+        </section>
+        <h2 class="title" style="margin-top: 40px; margin-bottom: 15px;">Event’larimizdan lavhalar</h2>
+        <!-- HTML -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <!-- original set -->
+                <img src="./images/events/event_1.avif" alt="member" class="marquee__track__img" loading="lazy"
+                    decoding="async" width="322" height="168">
+                <img src="./images/events/event_2.avif" alt="member" class="marquee__track__img" loading="lazy"
+                    decoding="async" width="362" height="168">
+                <img src="./images/events/event_1.avif" alt="member" class="marquee__track__img" loading="lazy"
+                    decoding="async" width="322" height="168">
+                <img src="./images/events/event_2.avif" alt="member" class="marquee__track__img" loading="lazy"
+                    decoding="async" width="362" height="168">
+
+                <!-- duplicate the same set for a seamless loop -->
+                <img src="./images/events/event_1.avif" alt="member" class="marquee__track__img" loading="lazy"
+                    decoding="async" width="322" height="168">
+                <img src="./images/events/event_2.avif" alt="member" class="marquee__track__img" loading="lazy"
+                    decoding="async" width="362" height="168">
+                <img src="./images/events/event_1.avif" alt="member" class="marquee__track__img" loading="lazy"
+                    decoding="async" width="322" height="168">
+                <img src="./images/events/event_2.avif" alt="member" class="marquee__track__img" loading="lazy"
+                    decoding="async" width="362" height="168">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="title" style="margin-top: 40px; margin-bottom: 15px;">Savollaringiz bormi? </h2>
+    <div id="form_sec" class="form-container">
+        <div class="form-wrapper">
+            <h1>Ma'lumotlaringizni qoldiring:</h1>
+
+            <div class="success-message" id="successMessage">
+                Ma'lumotlaringiz muvaffaqiyatli yuborildi!
+            </div>
+
+            <form id="bookingForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Ismingiz?" required>
+                </div>
+
+                <div class="form-group">
+                    <div class="phone-group">
+                        <select id="countryCode" class="country-code" required>
+                            <optgroup label="MDH davlatlari">
+                                <option value="+998" selected>🇺🇿 +998</option>
+                                <option value="+7">🇷🇺 +7 </option>
+                                <option value="+7">🇰🇿 +7</option>
+                                <option value="+992">🇹🇯 +992 </option>
+                                <option value="+996">🇰🇬 +996</option>
+                                <option value="+993">🇹🇲 +993 </option>
+                                <option value="+994">🇦🇿 +994 </option>
+                                <option value="+374">🇦🇲 +374 </option>
+                                <option value="+375">🇧🇾 +375 </option>
+                                <option value="+373">🇲🇩 +373 </option>
+                                <option value="+995">🇬🇪 +995 </option>
+                            </optgroup>
+                            <optgroup label="Yevropa">
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+49">🇩🇪 +49 </option>
+                                <option value="+33">🇫🇷 +33 </option>
+                                <option value="+39">🇮🇹 +39 </option>
+                                <option value="+34">🇪🇸 +34 </option>
+                                <option value="+48">🇵🇱 +48 </option>
+                                <option value="+31">🇳🇱 +31 </option>
+                                <option value="+46">🇸🇪 +46 </option>
+                                <option value="+47">🇳🇴 +47 </option>
+                                <option value="+358">🇫🇮 +358 </option>
+                                <option value="+45">🇩🇰 +45 </option>
+                                <option value="+41">🇨🇭 +41 </option>
+                                <option value="+43">🇦🇹 +43 </option>
+                                <option value="+32">🇧🇪 +32 </option>
+                                <option value="+351">🇵🇹 +351 </option>
+                            </optgroup>
+                            <optgroup label="Amerika">
+                                <option value="+1">🇺🇸 +1 </option>
+                                <option value="+1">🇨🇦 +1 </option>
+                                <option value="+52">🇲🇽 +52 </option>
+                                <option value="+55">🇧🇷 +55 </option>
+                                <option value="+54">🇦🇷 +54 </option>
+                            </optgroup>
+                            <optgroup label="Boshqa davlatlar">
+                                <option value="+90">🇹🇷 +90 </option>
+                                <option value="+971">🇦🇪 +971 </option>
+                                <option value="+966">🇸🇦 +966</option>
+                                <option value="+86">🇨🇳 +86 </option>
+                                <option value="+82">🇰🇷 +82</option>
+                                <option value="+81">🇯🇵 +81 </option>
+                                <option value="+91">🇮🇳 +91 </option>
+                            </optgroup>
+                        </select>
+                        <input type="tel" id="phone" class="phone-input" placeholder="88 888 88 88" required>
+                    </div>
+                </div>
+
+                <div class="form-group time-group">
+                    <label for="time">Qaysi vaqtda bog’langanimiz qulay?</label>
+                    <input type="time" id="time" value="14:00" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Yuborish</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="footer-info">
+                        <img class="footer-info-img" width="25" height="25" loading="lazy" decoding="async"
+                            src="./images/logo/telegram.png" alt="">
+                        <a class="footer-info-link" href="#">Asoschilarmanager</a>
+                    </div>
+                    <div class="footer-info">
+                        <img class="footer-info-img" width="25" height="25" loading="lazy" decoding="async"
+                            src="./images/logo/instagram.png" alt="">
+                        <a class="footer-info-link" href="#">Asoschilarclub</a>
+                    </div>
+                    <div class="footer-info">
+                        <img class="footer-info-img" width="25" height="25" loading="lazy" decoding="async"
+                            src="./images/logo/phone-call 1.png" alt="">
+                        <a class="footer-info-link" href="tel:+998 99 033 99 39">+998 99 033 99 39</a>
+                    </div>
+                </div>
+                <div class="footer-logo">
+                    <img class="footer-logo-img" loading="lazy" decoding="async" width="110" height="82"
+                        src="./images/logo/footer-logo.svg" alt="">
+                </div>
+            </div>
+            <p class="footer-text">Since 2025</p>
+        </div>
+    </footer>
+    <div class="overlay"></div>
+       <div id="succes" class="succes">
+        <div class="succes__container">
+            <div class="succes__icon_box">
+                <svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.0298 25.53C12.3298 25.53 11.6648 25.25 11.1748 24.76L1.26979 14.855C0.254795 13.84 0.254795 12.16 1.26979 11.145C2.28479 10.13 3.96479 10.13 4.97979 11.145L13.0298 19.195L31.0198 1.20498C32.0348 0.189976 33.7148 0.189976 34.7298 1.20498C35.7448 2.21998 35.7448 3.89997 34.7298 4.91497L14.8848 24.76C14.3948 25.25 13.7298 25.53 13.0298 25.53Z"
+                        fill="#fff" />
+                </svg>
+            </div>
+
+            <h2 class="succes__title">Clubga muvaffaqiyatli yozildingiz!</h2>
+            <p class="succes__text">Operatorlar 24 soat ichida siz bilan bog’lanishadi.</p>
+            <button class="succes__btn">Bosh sahifaga qaytish</button>
+        </div>
+    </div>
+
+    <img src="./images/bg.avif" alt="bg" loading="lazy" decoding="async" class="bg">
+    <script defer src="https://fast.wistia.com/player.js"></script>
+    <script defer src="./js/app.js"></script>
+</body>
+
+</html>
