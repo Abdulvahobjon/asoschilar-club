@@ -141,10 +141,11 @@ form.addEventListener('submit', async function (e) {
   const registrationDateTime = now.toLocaleString('uz-UZ');
 
   const formData = new FormData();
-  formData.append('name', name);
-  formData.append('phone', fullPhone);
-  formData.append('time', formattedTime);
-  formData.append('registeredAt', registrationDateTime);
+  formData.append('sheetName', "Lead");
+  formData.append('Ism', name);
+  formData.append('Telefon raqam', fullPhone);
+  formData.append('Qulay vaqt', formattedTime);
+  formData.append('Royhatdan otgan vaqti', registrationDateTime);
 
   submitButton.classList.add('loading');
   submitButton.disabled = true;
@@ -156,15 +157,10 @@ form.addEventListener('submit', async function (e) {
       body: formData
     });
 
-    if (response.ok) {
       overlay.style.display = "block"
       successModal.classList.add('succes-active');
-    } else {
-      throw new Error('Sheets yuborish xatosi');
-    }
   } catch (error) {
     console.error('Xato:', error);
-    alert('✗ Xato yuz berdi. Qayta urinib ko\'ring!');
   } finally {
     submitButton.classList.remove('loading');
     submitButton.disabled = false;
