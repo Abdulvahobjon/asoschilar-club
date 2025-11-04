@@ -94,54 +94,53 @@ phoneInput.addEventListener('paste', function (e) {
   
   e.target.value = formatted;
 });
-
-// Success modal element
-const successModal = document.getElementById('succes');
-const overlay = document.getElementsByClassName('overlay');
+// Success modal elements
+const successModal = document.getElementById('succes'); // E’TIBOR: id 'success' emas, 'succes'
+const overlay = document.querySelector('.overlay');
 const successBtn = document.querySelector('.succes__btn');
 
-// Close modal function
 function closeSuccessModal() {
-  successModal.classList.remove('succes-active');
-  overlay.style.display = "none"
+  if (successModal) successModal.classList.remove('succes-active');
+  if (overlay) overlay.style.display = 'none';
   form.reset();
   countryCode.value = '+998';
   phoneInput.placeholder = phoneFormats['+998'].placeholder;
 }
 
-// Button click event
 if (successBtn) {
   successBtn.addEventListener('click', closeSuccessModal);
 }
 
-// Form submit
 form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
-  const name = document.getElementById('name').value;
+  const name = document.getElementById('name')?.value?.trim() || '';
   const code = countryCode.value;
-  const phone = phoneInput.value.replace(/\D/g, '');
-  const time = document.getElementById('time').value;
+  const rawPhone = phoneInput.value.replace(/\D/g, '');
+  const timeVal = document.getElementById('time')?.value || '';
 
-  if (!code) {
-    alert("Iltimos, mamlakat kodini tanlang!");
-    return;
-  }
+  if (!code) return alert("Iltimos, mamlakat kodini tanlang!");
+  if (!rawPhone) return alert("Iltimos, telefon raqamini kiriting!");
 
-  if (phone.length === 0) {
-    alert("Iltimos, telefon raqamini kiriting!");
-    return;
-  }
-
-  const fullPhone = code + phone;
+  // Agar time bo'sh bo‘lsa, hozirgi vaqtni ishlatamiz
+  let formattedTime = '';
   const now = new Date();
-  const [hours, minutes] = time.split(':');
   const todayDate = now.toLocaleDateString('uz-UZ');
-  const formattedTime = `${todayDate} ${hours}:${minutes}`;
+
+  if (timeVal.includes(':')) {
+    const [hours, minutes] = timeVal.split(':');
+    formattedTime = `${todayDate} ${hours}:${minutes}`;
+  } else {
+    const hh = String(now.getHours()).padStart(2, '0');
+    const mm = String(now.getMinutes()).padStart(2, '0');
+    formattedTime = `${todayDate} ${hh}:${mm}`;
+  }
+
   const registrationDateTime = now.toLocaleString('uz-UZ');
+  const fullPhone = code + rawPhone;
 
   const formData = new FormData();
-  formData.append('sheetName', "Lead");
+  formData.append('sheetName', 'Lead');
   formData.append('Ism', name);
   formData.append('Telefon raqam', fullPhone);
   formData.append('Qulay vaqt', formattedTime);
@@ -152,21 +151,29 @@ form.addEventListener('submit', async function (e) {
   submitButton.textContent = 'Yuborilmoqda...';
 
   try {
-    const response = await fetch(GOOGLE_SHEETS_URL, {
-      method: 'POST',
-      body: formData
-    });
+    const res = await fetch(GOOGLE_SHEETS_URL, { method: 'POST', body: formData });
 
-      overlay.style.display = "block"
-      successModal.classList.add('succes-active');
-  } catch (error) {
-    console.error('Xato:', error);
+    // faqat muvaffaqiyatda modalni ko‘rsatamiz
+    if (res.ok) {
+      // Agar body JSON bo‘lsa, xohlasang tekshirib olasan:
+      // const data = await res.json(); console.log(data);
+
+      if (overlay) overlay.style.display = 'block';
+      if (successModal) successModal.classList.add('succes-active');
+    } else {
+      console.error('Server error:', res.status, await res.text());
+      alert('Xatolik: serverdan muvaffaqiyatsiz javob keldi.');
+    }
+  } catch (err) {
+    console.error('Xato:', err);
+    alert('Tarmoq xatosi. Keyinroq urinib ko‘ring.');
   } finally {
     submitButton.classList.remove('loading');
     submitButton.disabled = false;
     submitButton.textContent = 'Yuborish';
   }
 });
+
 
 // Sahifa yuklanganda default qiymat
 window.addEventListener('load', function () {
