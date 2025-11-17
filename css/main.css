@@ -728,7 +728,7 @@ body.active {
 }
 
 .statistic-col-title {
-  font-size: 70px;
+  font-size: 67px;
   line-height: 73.5px;
   letter-spacing: -1.399999976158142px;
   margin-bottom: 12px;
@@ -746,7 +746,6 @@ body.active {
   letter-spacing: -0.20000000298023224px;
   text-align: center;
   color: #7a7a7a;
-  max-width: 224px;
 }
 
 .mission-text,
@@ -771,7 +770,7 @@ body.active {
   }
 
   .statistic-col-title {
-    font-size: 54px;
+    font-size: clamp(22px, 6.9vw, 54px);
     line-height: 1.2;
   }
 
@@ -910,7 +909,6 @@ body.active {
 }
 
 .requirements-col-text {
-  max-width: 175px;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.5199999809265137px;
