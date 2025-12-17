@@ -926,7 +926,6 @@ body.active {
 
 .members {
   padding-top: 48px;
-  padding-bottom: 44px;
 }
 
 .members-container {
@@ -999,7 +998,7 @@ body.active {
 .members-col-text {
   font-size: 13px;
   font-weight: 400;
-  line-height: 11px;
+  line-height: 15px;
   color: #ccc;
 }
 
@@ -1664,7 +1663,7 @@ body.active {
 .meetingTitle {
   font-size: 30px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 35px;
   letter-spacing: -1.3200000524520874px;
   text-align: center;
   margin-bottom: 87px;
@@ -1870,7 +1869,7 @@ body.active {
 
   .meetingListItemText,
   .requirements-col-text {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .requirements-title {
