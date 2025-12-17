@@ -116,7 +116,7 @@ body.active {
   border-radius: 8px !important;
 }
 
-  .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   background-color: #D9D9D9 !important;
   width: 16px !important;
   height: 4px !important;
@@ -360,6 +360,9 @@ body.active {
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefits-col-text,
@@ -399,7 +402,7 @@ body.active {
 
 .hero-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 27px;
 }
 
@@ -552,7 +555,7 @@ body.active {
 
   .benefits-row {
     gap: 30px;
-   position: relative;
+    position: relative;
   }
 
 }
@@ -633,15 +636,18 @@ body.active {
 
 .about-container {
   max-width: 1100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   margin-bottom: 80px;
 }
 
 .about-info {
-  max-width: 467px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .about-title {
@@ -653,7 +659,6 @@ body.active {
 .about-text {
   font-size: 28px;
   font-weight: 400;
-  text-align: left;
 }
 
 .statistic-col-title,
@@ -668,12 +673,14 @@ body.active {
   border-radius: 31px;
   width: 100%;
 }
+
 .about-img-box {
   position: relative;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
+
 @media (max-width: 814px) {
   .about {
     padding-top: 39px;
@@ -793,12 +800,14 @@ body.active {
 .steps-container {
   max-width: 1100px;
 }
+
 .about-imgss {
   position: absolute;
   left: 1200px;
   top: 250px;
 
 }
+
 .steps-imgs {
   margin-left: auto;
   margin-right: auto;
@@ -1366,7 +1375,7 @@ body.active {
 
 .steps-row .steps-col:nth-child(5) .steps-col-text {
   font-family: Poppins, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   width: 100%;
   line-height: 21px;
@@ -1757,11 +1766,12 @@ body.active {
     font-size: 18px;
     line-height: 20px;
   }
+
   .contact-title>span {
     font-size: 35px;
     line-height: 40px;
   }
-  
+
 
   .develop-title,
   .mission-title {
@@ -1877,6 +1887,7 @@ body.active {
   .price-title {
     font-size: 30px;
   }
+
   .hero-top {
     margin-bottom: 100px;
   }
@@ -1956,6 +1967,7 @@ body.active {
     order: 0;
     transform: translateY(0);
   }
+
   .about-imgs {
     margin-left: auto;
     margin-right: auto;
@@ -1963,6 +1975,7 @@ body.active {
     align-items: center;
     justify-content: center;
   }
+
   .steps-imgs {
     margin-bottom: 70px;
     padding-top: 20px;
