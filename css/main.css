@@ -661,6 +661,48 @@ body.active {
   font-weight: 400;
 }
 
+
+
+.brand {
+  padding-top: 110px;
+}
+.brands {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.brands__track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;         /* MUHIM */
+  will-change: transform;
+  animation: brands-scroll 18s linear infinite;
+}
+
+.brands__track img {
+  flex: 0 0 auto;
+  width: 179px;
+  height: 65px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* hover bo‘lsa pauza (desktop) */
+.brands:hover .brands__track { animation-play-state: paused; }
+
+@keyframes brands-scroll {
+  0% { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(-50%,0,0); } /* 2x content bo‘lsa perfect loop */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brands__track { animation: none; transform: none; }
+}
+
 .statistic-col-title,
 .statistic-title {
   font-family: Poppins, sans-serif;
