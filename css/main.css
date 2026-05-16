@@ -328,8 +328,8 @@ body.active {
   background-color: #fff;
   display: inline-flex;
   align-items: center;
-  padding: 10px 15px 10px 24px;
-  gap: 28px;
+  padding: 10px 10px 10px 24px;
+  gap: 20px;
   border-radius: 22px;
   font-family: Poppins, sans-serif;
   font-size: 20px;
@@ -342,7 +342,7 @@ body.active {
   background-color: #fff;
   display: inline-flex;
   align-items: center;
-  padding: 10px 50px 8.5px 50px;
+  padding: 10px 30px 8.5px 30px;
   gap: 28px;
   border-radius: 16px;
   font-family: Poppins, sans-serif;
@@ -1099,8 +1099,8 @@ body.active {
 
 .price-top-money {
   font-family: Poppins;
-  font-size: 115px;
   font-weight: 500;
+  font-size: clamp(45px, 15vw, 100px);
   line-height: 55px;
   letter-spacing: -1.6200000047683716px;
   text-align: center;
@@ -1454,6 +1454,14 @@ body.active {
   left: 0;
 }
 
+.bgCloseModal {
+  z-index: 9998;
+}
+
+.formModal {
+  z-index: 9999;
+}
+
 .club-reasons {
   padding-top: 37px;
   padding-bottom: 56px;
@@ -1687,6 +1695,362 @@ body.active {
   animation: 0.3s linear infinite rotate;
 }
 
+/* Ariza modal — premium dark design */
+.arizaModal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+}
+
+.arizaModal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.arizaModalContainer {
+  background: linear-gradient(160deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 1px solid #2a2a2a;
+  border-radius: 24px;
+  padding: 44px 40px 36px;
+  width: 100%;
+  max-width: 560px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  transform: translateY(20px) scale(0.96);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.arizaModal.active .arizaModalContainer {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.arizaModalContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.arizaModalContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.arizaModalContainer::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+.arizaModalClose {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #2a2a2a;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.arizaModalClose:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #444;
+  transform: rotate(90deg);
+}
+
+.arizaModalClose img {
+  width: 14px;
+  height: 14px;
+  filter: brightness(0) invert(1);
+}
+
+.arizaModalTitle {
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 0%, #a8a8a8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 8px;
+}
+
+.arizaModalSubtitle {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.arizaForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.arizaField {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.arizaLabel {
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d4d4d4;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+.arizaInput {
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  padding: 14px 18px;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.2s ease;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.arizaInput:hover {
+  border-color: #3a3a3a;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.arizaInput:focus {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.arizaInput::placeholder {
+  color: #555;
+}
+
+.arizaOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.arizaOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  color: #d4d4d4;
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.arizaOption:hover {
+  border-color: #444;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.arizaOption input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.arizaOption input[type="radio"]:checked {
+  border-color: #fff;
+}
+
+.arizaOption input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.arizaOption:has(input:checked) {
+  border-color: #fff;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  color: #fff;
+}
+
+.arizaError {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  color: #ff6b6b;
+  min-height: 14px;
+  letter-spacing: 0.2px;
+}
+
+.arizaSubmit {
+  margin-top: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  color: #000;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 14px;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.2px;
+}
+
+.arizaSubmit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.15);
+}
+
+.arizaSubmit:active {
+  transform: translateY(0);
+}
+
+.arizaSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.arizaSubmit img {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 768px) {
+  .arizaModal {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .arizaModalContainer {
+    padding: 60px 22px 28px;
+    border-radius: 0;
+    max-height: 100vh;
+    height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    border: none;
+  }
+
+  .arizaModal.active .arizaModalContainer {
+    transform: translateY(0);
+  }
+
+  .arizaModalContainer::before {
+    display: none;
+  }
+
+  .arizaModalClose {
+    top: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .arizaModalTitle {
+    font-size: 26px;
+    margin-top: 0;
+  }
+
+  .arizaModalSubtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .arizaForm {
+    gap: 0;
+  }
+
+  .arizaLabel {
+    font-size: 13px;
+  }
+
+  .arizaInput {
+    padding: 13px 16px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+
+  .arizaOption {
+    padding: 13px 16px;
+    font-size: 14px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+
+  .arizaOption input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .arizaSubmit {
+    padding: 15px 24px;
+    font-size: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .arizaModalContainer {
+    padding: 28px 18px 24px;
+  }
+
+  .arizaModalTitle {
+    font-size: 20px;
+  }
+
+  .arizaModalSubtitle {
+    font-size: 12px;
+  }
+}
+
 .meeting {
   background-color: #fff;
   padding-top: 87px;
@@ -1718,8 +2082,8 @@ body.active {
 .meetingList {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 62px;
+  grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 30px;
 }
 
@@ -1747,6 +2111,29 @@ body.active {
 }
 
 .meetingListItem>img {
+  min-width: 60px;
+  max-width: 60px;
+}
+
+.meetingListItemCombo {
+  align-items: center;
+  gap: 24px;
+}
+.meetingListItem-min {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.meetingListItemRow {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+}
+
+.meetingListItemRow>img {
   min-width: 60px;
   max-width: 60px;
 }
@@ -1993,7 +2380,6 @@ body.active {
   }
 
   .price-top-money {
-    font-size: 83px;
     line-height: 1;
   }
 
