@@ -108,6 +108,7 @@ arizaForm.addEventListener("submit", (e) => {
 
   const name = document.getElementById("ariza-name").value.trim();
   const phone = document.getElementById("ariza-phone").value.trim();
+  const telegram = document.getElementById("ariza-telegram").value.trim();
   const business = document.getElementById("ariza-business").value.trim();
   const turnover = arizaForm.querySelector('input[name="Kompaniya yillik aylanmasi"]:checked');
   const payment = arizaForm.querySelector('input[name="Tolov narxi sizga maqulmi"]:checked');
@@ -164,12 +165,13 @@ arizaForm.addEventListener("submit", (e) => {
   params.append("sheetName", "Lead");
   params.append("Ism", name);
   params.append("Telefon raqam", phone);
+  params.append("Telegram username", telegram);
   params.append("Tadbirkorlik turi", business);
   params.append("Kompaniya yillik aylanmasi", turnover.value);
   params.append("Tolov narxi sizga maqulmi", payment.value);
   params.append("Royhatdan o'tgan vaqti", royxatVaqti);
 
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwWlpjJC3_yw-VUQgLGVnzxk-aRy_EwN_hiPKVfTUsyayBz1Dom-mRecKUTRnh0XrDy/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzreP0_eE5xpuArPEzp5Q4mux1ukwjQCTxtqMh5Xgq5LGcDXnxlBrkSaGE4bsKnhIKN/exec";
 
   fetch(SCRIPT_URL, {
     method: "POST",
@@ -237,7 +239,7 @@ function validateForm(formName, nameId, phoneId, nameErrorId, phoneErrorId) {
 
       bgCloseModal.style.display = "flex";
       fetch(
-        "https://script.google.com/macros/s/AKfycbwWlpjJC3_yw-VUQgLGVnzxk-aRy_EwN_hiPKVfTUsyayBz1Dom-mRecKUTRnh0XrDy/exec",
+        "https://script.google.com/macros/s/AKfycbzreP0_eE5xpuArPEzp5Q4mux1ukwjQCTxtqMh5Xgq5LGcDXnxlBrkSaGE4bsKnhIKN/exec",
         {
           method: "POST",
           body: new FormData(form),

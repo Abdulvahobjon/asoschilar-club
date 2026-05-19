@@ -735,8 +735,7 @@
       <button class="arizaModalClose" type="button" aria-label="Yopish">
         <img src="./img/svg/close.svg" alt="close" />
       </button>
-      <h3 class="arizaModalTitle">Ariza qoldirish</h3>
-      <p class="arizaModalSubtitle">Quyidagi savollarga javob bering, sizga aloqaga chiqamiz.</p>
+      <h3 class="arizaModalTitle">Club to'g'risida ma'lumot olish uchun va/yoki clubga qo'shilish uchun ro'yhatdan o'ting!</h3>
 
       <form class="arizaForm" name="ariza-form" novalidate>
         <div class="arizaField">
@@ -752,40 +751,46 @@
         </div>
 
         <div class="arizaField">
-          <label class="arizaLabel" for="ariza-business">3. Tadbirkorlik turi</label>
+          <label class="arizaLabel" for="ariza-telegram">3. Telegram username (agar bo'lsa)</label>
+          <input class="arizaInput" id="ariza-telegram" name="Telegram username" type="text" placeholder="@username" />
+          <span class="arizaError" data-error="telegram"></span>
+        </div>
+
+        <div class="arizaField">
+          <label class="arizaLabel" for="ariza-business">4. Tadbirkorlik turi</label>
           <input class="arizaInput" id="ariza-business" name="Tadbirkorlik turi" type="text" placeholder="Masalan: IT, savdo, ishlab chiqarish..." />
           <span class="arizaError" data-error="business"></span>
         </div>
 
         <div class="arizaField">
-          <span class="arizaLabel">4. Kompaniya yillik aylanmasi</span>
+          <span class="arizaLabel">5. Kompaniya yillik aylanmasi</span>
           <div class="arizaOptions">
             <label class="arizaOption">
               <input type="radio" name="Kompaniya yillik aylanmasi" value="$0-100,000" />
-              <span>$0 - 100,000</span>
+              <span>$ 0 - 100,000</span>
             </label>
             <label class="arizaOption">
               <input type="radio" name="Kompaniya yillik aylanmasi" value="$100,000-1,000,000" />
-              <span>$100,000 - 1,000,000</span>
+              <span>$ 100,000 - 1,000,000</span>
             </label>
             <label class="arizaOption">
               <input type="radio" name="Kompaniya yillik aylanmasi" value="$1,000,000+" />
-              <span>$1,000,000 +</span>
+              <span>$ 1,000,000 +</span>
             </label>
           </div>
           <span class="arizaError" data-error="turnover"></span>
         </div>
 
         <div class="arizaField">
-          <span class="arizaLabel">5. Asoschilar clubiga qo'shilish uchun bir martalik 28 200 000 so'm kirish to'lovi bor. Kirish to'lovi sizning hozirgi imkoniyatlaringizga mos keladimi?</span>
+          <span class="arizaLabel">6. Asoschilar clubiga qo'shilish uchun bir martalik 28 200 000 so'm kirish to'lovi bor. Kirish to'lovi sizning hozirgi imkoniyatlaringizga mos keladimi?</span>
           <div class="arizaOptions">
             <label class="arizaOption">
-              <input type="radio" name="Tolov narxi sizga maqulmi" value="Ha" />
-              <span>Ha</span>
+              <input type="radio" name="Tolov narxi sizga maqulmi" value="Ha, albatta" />
+              <span>Ha, albatta</span>
             </label>
             <label class="arizaOption">
-              <input type="radio" name="Tolov narxi sizga maqulmi" value="Yo'q" />
-              <span>Yo'q</span>
+              <input type="radio" name="Tolov narxi sizga maqulmi" value="Hozircha yo'q" />
+              <span>Hozircha yo'q</span>
             </label>
           </div>
           <span class="arizaError" data-error="payment"></span>
