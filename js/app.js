@@ -152,11 +152,8 @@ arizaForm.addEventListener("submit", (e) => {
   if (!valid) return;
 
   const submitBtn = arizaForm.querySelector(".arizaSubmit");
-  const submitImg = submitBtn.querySelector("img");
   submitBtn.disabled = true;
-  submitImg.classList.add("rotating");
 
-  // Royhatdan o'tgan vaqti — webinar pattern bilan bir xil format
   const now = new Date();
   const pad = (n) => String(n).padStart(2, "0");
   const royxatVaqti =
@@ -174,38 +171,17 @@ arizaForm.addEventListener("submit", (e) => {
 
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwWlpjJC3_yw-VUQgLGVnzxk-aRy_EwN_hiPKVfTUsyayBz1Dom-mRecKUTRnh0XrDy/exec";
 
-  console.log("Yuborilayotgan ma'lumotlar:", Object.fromEntries(params));
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: params.toString(),
+    keepalive: true,
+  }).catch((err) => console.error("Yuborishda xatolik:", err));
 
-fetch(SCRIPT_URL, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded",
-  },
-  body: params.toString(),
-})
-    .then(() => {
-      console.log("Ma'lumot yuborildi (no-cors rejimida javob ko'rinmaydi)");
-      closeArizaModal();
-      formModal.classList.add("active");
-      bgCloseModal.style.display = "flex";
-      formModamValid.style.display = "block";
-      formModamInvalid.style.display = "none";
-      formModalText.textContent = "Rahmat! Arizangiz yuborildi.";
-      arizaForm.reset();
-    })
-    .catch((err) => {
-      console.error("Yuborishda xatolik:", err);
-      closeArizaModal();
-      formModal.classList.add("active");
-      bgCloseModal.style.display = "flex";
-      formModamValid.style.display = "none";
-      formModamInvalid.style.display = "block";
-      formModalText.textContent = "Xatolik yuz berdi. Qaytadan urinib ko'ring.";
-    })
-    .finally(() => {
-      submitBtn.disabled = false;
-      submitImg.classList.remove("rotating");
-    });
+  arizaForm.reset();
+  window.location.href = "./thankYou.html";
 });
 
 // Formlar va validatsiya xabarlarini boshqaruvchi funksiyalar
